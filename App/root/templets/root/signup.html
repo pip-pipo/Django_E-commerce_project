@@ -6,7 +6,7 @@ Signup From
 {% endblock titel %} 
 
 {% block customCss %}
-<link rel="stylesheet" href="{% static 'css/root/signup.css' %}" />
+<link rel="stylesheet" href="{% static 'css/signup.css' %}" />
 {% endblock customCss %} 
 
 
@@ -23,13 +23,6 @@ Signup From
   {% endfor %}
 {% endif %}
 {% endblock msg %}
-
-
-
-
-
-
-
 {% block content %}
 
 
@@ -39,6 +32,9 @@ Signup From
 
   
   <form action="" method="POST" novalidate>
+
+  <h3>Sign up</h3>
+  <hr class="bg-success">
     {% csrf_token %}
     <div class="form-group w-100">
       {% for fm in signupdata %}

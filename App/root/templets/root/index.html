@@ -1,21 +1,54 @@
 {% extends "root/templets/base/base.html" %}
-{% load static %}
+ {% load static %}
 
-
-{% comment %} titel {% endcomment %}
-{% block titel %}
-
-  Pyjonathon
+{% comment %}
+titel 
+{% endcomment %}
+{% block titel %} 
+Pyjonathon 
 {% endblock titel %}
-
-{% comment %} custom css {% endcomment %}
-  {% block customCss %}
-   <link rel="stylesheet" href="{% static 'css/root/index.css' %}"> 
-  {% endblock customCss %}
-
-
+ {% comment %} custom css {% endcomment %} 
+{% block customCss %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}" />
+{% endblock customCss %} 
 {% comment %} body content {% endcomment %}
-{% block content %}
-  
+ {% block content %}
 
-{% endblock content %}
+<div class="container-fluid bg_contianer ">
+  <div class="row">
+    <div class="col-8">
+      <ul class="menu cf">
+        <li><a href="">Python</a></li>
+        <li>
+          <a href="">All Category</a>
+          <ul class="submenu">
+            <li><a href="">Django</a></li>
+            <li><a href="">PHP</a></li>
+            <li><a href="">WordPerss</a></li>
+            <li><a href="">React</a></li>
+          </ul>			
+        </li>
+        <li><a href="">Recent Blogs</a></li>
+        <li><a href="">Services</a></li>
+        <li>
+          <a href="">Scource Code</a>
+          <ul class="submenu">
+            <li><a href="">Django</a></li>
+            <li><a href="">PHP</a></li>
+            <li><a href="">WordPerss</a></li>
+            <li><a href="">React</a></li>
+          </ul>			
+        </li>
+      </ul>
+      
+    </div>
+    <div class="col-3">
+      <form class="form_search" action="">
+        <input type="search" placeholder="Search Blogs" />
+        <i class="fa fa-search"></i>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock content %} {% block script %} {% endblock script %}

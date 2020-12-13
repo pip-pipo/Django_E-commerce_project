@@ -23,7 +23,7 @@ def signup(request):
 
 
 
-def login(request):
+def user_login(request):
     if not request.user.is_authenticated:
         if request.method == "POST":
             logindata = LoginFrom(request,data=request.POST)
@@ -43,4 +43,13 @@ def login(request):
 
 
 def dashboard(request):
-    return render(request,"root/templets/root/dashboard.html")
+    if request.user.is_authenticated:
+        return render(request,"root/templets/root/dashboard.html")
+    else:
+        return HttpResponseRedirect('/login/')
+
+
+
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect('/')
