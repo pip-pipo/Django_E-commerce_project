@@ -1,0 +1,20 @@
+{% extends "root/templets/base/base.html" %}
+{% load static %}
+
+
+{% comment %} titel {% endcomment %}
+{% block titel %}
+Login page
+{% endblock titel %}
+
+{% comment %} custom css {% endcomment %}
+  {% block customCss %}
+   <link rel="stylesheet" href="{% static 'css/root/login.css' %}"> 
+  {% endblock customCss %}
+
+
+{% comment %} body content {% endcomment %}
+{% block content %}
+
+<h3>Dashboard</h3>
+{% endblock content %}
